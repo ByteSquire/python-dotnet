@@ -1,9 +1,3 @@
-#
-# NOTE: THIS DOCKERFILE IS GENERATED VIA "update.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY.
-#
-
 FROM buildpack-deps:buster
 
 # ensure local python is preferred over distribution python
@@ -95,6 +89,7 @@ RUN set -ex; \
 	rm -f get-pip.py
 
 # Dotnet core stuff:
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
